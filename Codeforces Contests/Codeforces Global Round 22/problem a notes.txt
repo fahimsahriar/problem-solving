@@ -1,0 +1,35 @@
+zeros and one in separte array.
+
+array_of_zero = []
+array_of_one = []
+
+sort(array_of_zero)
+sort(array_of_one)
+
+for(i to n):
+	o = 0;
+	z = 0;
+	if i is odd and odd is not empty:
+		use zero
+		o++
+	else if is even and odd is not empty:
+		use one
+		z++
+	else if odd is empty:
+		while(odd is not empty):
+			use all zeros
+	else:
+		while(even is empty):
+			use all one	
+			with the first iteration of 2x
+
+one = 1000 100 10
+zero = 1
+
+if one>zero{
+	
+}
+else{
+}
+
+lowtes of one + 2*1 + highest of one 2000 + 

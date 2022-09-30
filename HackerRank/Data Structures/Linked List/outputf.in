@@ -1,0 +1,3 @@
+The initial string is : shishir
+The string after push_back operation is : shishirs
+The string after pop_back operation is : shishir
