@@ -1,33 +1,69 @@
-#include <iostream>
-#include <string> // for string class
+#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-// Driver Code
+
+class student
+{
+public:
+	string name;
+	int id;
+};
+class Node
+{
+public:
+	int data;
+	Node *next;
+};
+
+void printList(Node *n)
+{
+	while(n!=NULL)
+	{
+		cout<<"The data of"<<n<<" is:"<<(n->data)<<endl;
+		n = n->next;
+	}
+}
+void delete_element(Node *n)
+{
+	
+}
+
 int main()
 {
-	// Declaring string
-	string str;
+	//testing the class's functionality
 
-	// Taking string input using getline()
-	getline(cin, str);
+	student fahim;
 
-	// Displaying string
-	cout << "The initial string is : ";
-	cout << str << endl;
+	cin>>fahim.id;
+	cout<<fahim.id<<endl;
+	//testing the class's functionality
 
-	// Inserting a character
-	str.push_back('s');
+	int a;
+	a = 5;
+	Node *head;
+	Node *second;
+	Node *third;
+	head = new Node();
+	second = new Node();
+	third = new Node();
 
-	// Displaying string
-	cout << "The string after push_back operation is : ";
-	cout << str << endl;
+	head->data = 5;
+	head->next = second;
 
-	// Deleting a character
-	str.pop_back();
+	second->data = 6;
+	second->next = third;
 
-	// Displaying string
-	cout << "The string after pop_back operation is : ";
-	cout << str << endl;
+	third->data = 7;
+	third->next = NULL;
+
+	cout<<second->data<<endl;
+	cout<<second->next<<endl;
+
+	cout<<a<<endl;
+
+	//traversing function of the whole linked
+	printList(head);
 
 	return 0;
 }
