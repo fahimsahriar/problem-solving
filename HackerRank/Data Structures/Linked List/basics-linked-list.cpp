@@ -33,7 +33,7 @@ int main()
 	second->data = 6;
 	second->next = third;
 
-	third->data = 7;
+	third->data = 9;
 	third->next = NULL;
 
 	cout<<second->data<<endl;
