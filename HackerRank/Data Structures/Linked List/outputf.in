@@ -1,5 +1,7 @@
-6
-0xf36530
-The data of0xf361f0 is:5
-The data of0xf32410 is:6
-The data of0xf36530 is:9
+Linked list elements:5 6 9 
+Inserting 10 in the last position
+A node is inserted next to :9 !!
+Linked list elements:5 6 9 10 
+Inserting 12 in the last position
+A node is inserted next to :10 !!
+Linked list elements:5 6 9 10 12 

@@ -11,11 +11,28 @@ public:
 
 void printList(Node *n)
 {
+	cout<<"Linked list elements:";
 	while(n!=NULL)
 	{
-		cout<<"The data of"<<n<<" is:"<<(n->data)<<endl;
+		cout<<(n->data)<<" ";
 		n = n->next;
 	}
+	cout<<endl;
+}
+void append_element_in_last(Node *head, int data)
+{
+	cout<<"Inserting "<<data<<" in the last position"<<endl;
+	Node *new_node = new Node();
+	new_node->data = data;
+
+	Node *last;
+	last = head;
+	while(last->next!=NULL)
+	{
+		last = last->next;
+	}
+	cout<<"A node is inserted next to :"<<last->data<<" !!"<<endl;
+	last->next = new_node;
 }
 
 int main()
@@ -36,10 +53,11 @@ int main()
 	third->data = 9;
 	third->next = NULL;
 
-	cout<<second->data<<endl;
-	cout<<second->next<<endl;
-
 	//traversing function of the whole linked
+	printList(head);
+	append_element_in_last(head,10);
+	printList(head);
+	append_element_in_last(head,12);
 	printList(head);
 
 	return 0;
