@@ -1,7 +1,16 @@
-Linked list elements:5 6 9 
-Inserting 10 in the last position
-A node is inserted next to :9 !!
-Linked list elements:5 6 9 10 
-Inserting 12 in the last position
-A node is inserted next to :10 !!
-Linked list elements:5 6 9 10 12 
+Ubale to delete, the list is empty
+The list is empty
+10 inserted at head
+Linked list:10 
+Deleting 10 as the last element of list
+12 inserted at head
+13 inserted to the end
+5 inserted at head
+124 inserted to the end
+Linked list:5 12 13 124 
+Not found
+124 is deleted.
+13 is deleted.
+12 is deleted.
+Deleting 5 as the last element of list
+The list is empty
