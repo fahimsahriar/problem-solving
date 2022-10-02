@@ -18,28 +18,38 @@ void insert_at_head(Node* &head,int data)
 }
 void insert_after(Node* &head,int key,int data)
 {
-
 	Node* last = head;
-	int t = 0;
-	while(last->data!=key&&last->next!=NULL)
+	int t;
+	while(last->data!=key)
 	{
-		last = last->next;
-		t = 1;
-
+		if(last->next==NULL)
+		{
+			t = 1;
+			break;
+		}else
+		{
+			t = 1;
+			last = last->next;
+		}
+		if(last->data==key)
+		{
+			t = 0;
+			break;
+		}
 	}
 	if(t==1)
 		cout<<"Not found"<<endl;
 	else
 	{
-		cout<<"found:"<<last->data<<endl;
+		cout<<data<<" added next to "<<last->data<<endl;
 		Node *new_node = new Node();
 		new_node->data = data;
 
-		//continue here!!!!!
+		new_node->next = last->next;
+		last->next = new_node;
 	}
 
 }
-
 void printList(Node *n)
 {
 	if(n==NULL)
@@ -65,9 +75,8 @@ void append_element_in_last(Node* &head, int data)
 
 	if(head == NULL)
 	{
+		//inserting element as first element
 		insert_at_head(head,data);
-		// cout<<"Inserting "<<data<<" as first element !!"<<endl;
-		// head = new_node;
 		return;
 	}
 
@@ -101,29 +110,73 @@ void delete_last(Node* &head)
 		temp = temp->next;
 	}
 	cout<<temp->next->data<<" is deleted."<<endl;
+	delete temp->next;
 	temp->next = NULL;
+
+}
+void delete_key(Node* &head, int key)
+{
+	Node* last = head;
+	int t;
+	if(last->data==key)
+	{
+		head = last->next;
+		delete last;
+		return;
+	}
+	while(last->data!=key)
+	{
+		if(last->next==NULL)
+		{
+			t = 1;
+			break;
+		}else
+		{
+			t = 1;
+			last = last->next;
+		}
+		if(last->data==key)
+		{
+			t = 0;
+			break;
+		}
+	}
+	if(t==1)
+		cout<<"Not found"<<endl;
+	else
+	{
+		cout<<"found"<<endl;
+	}
 
 }
 
 int main()
 {
 	Node *head = NULL;
-	delete_last(head);
-	printList(head);
-	//traversing function of the whole linked
+
+	/*//displaying whole link list
+	printList(head);*/
+
+	/*//adding an element to the last
+	append_element_in_last(head,10);*/
+
+	/*//adding an element to head of list
+	insert_at_head(head,1);*/
+
+	/*//inserting after a key, or a postion
+	insert_after(head,10,100);*/
+
+	/*//deleting the last element
+	delete_last(head);*/
+
 	append_element_in_last(head,10);
-	printList(head);
-	delete_last(head);
+	append_element_in_last(head,11);
 	append_element_in_last(head,12);
-	append_element_in_last(head,13);
-	insert_at_head(head,5);
-	append_element_in_last(head,124);
 	printList(head);
-	insert_after(head,7,10);
-	delete_last(head);
-	delete_last(head);
-	delete_last(head);
-	delete_last(head);
+	delete_key(head,12);
+
+
+
 	printList(head);
 
 	return 0;
