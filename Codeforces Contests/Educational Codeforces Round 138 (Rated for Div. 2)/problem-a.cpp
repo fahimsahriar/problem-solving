@@ -13,10 +13,13 @@ int main() {
     {
       cin>>arr[i][0]>>arr[i][1];
     }
-    for(int i=0;i<m;i++)
+    int error;
+    for(int i=0;i<n;i++)
     {
-      cout<<arr[i][0]<<" "<<arr[i][1]<<endl;
-      if(arr[i][0]-1>=0)
+      for(int j=0;j<n;i++)
+      {
+        
+      }
     }
   }
   return 0;
